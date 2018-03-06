@@ -7,23 +7,13 @@ php region: открывающий тег php , тело php и закрываю
 <?php - открывающий тег php, ?> - закрывающий тег,
 если с момента открывающего тега до конца файла - зона php, то закрывающий тег можно опустить
 
-file.php:
-	phpzone1
-	phpzone2
-	...
-	...
-	...
-	phpzoneN
+file.php: phpzsoneS
 
-phpzoneI:
-	phpoperator1
-	phpoperator2
-	...
-	...
-	...
-	phpoperatorN
+phpzone:
+	declarations
+	thread
 
-phpoperatorI: {action/declaration/comment}
+phpoperator: {action/declaration/comment}
 
 action:
 	expression
