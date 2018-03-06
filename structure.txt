@@ -1,0 +1,52 @@
+программисты пишут программы на  php
+=> программисты контролируют .php файлы
+
+.php файл содержит список php-зон
+
+php region: открывающий тег php , тело php и закрывающий тег php
+<?php - открывающий тег php, ?> - закрывающий тег,
+если с момента открывающего тега до конца файла - зона php, то закрывающий тег можно опустить
+
+file.php:
+	phpzone1
+	phpzone2
+	...
+	...
+	...
+	phpzoneN
+
+phpzoneI:
+	phpoperator1
+	phpoperator2
+	...
+	...
+	...
+	phpoperatorN
+
+phpoperatorI: {action/declaration/comment}
+
+action:
+	expression
+	control_structure
+
+expression:
+	operation
+	operands
+
+operation:{unary/binary/ternary/funcall}
+
+operand:  {value/variable/expression}
+
+
+
+
+declaration:
+	variable
+	function
+	class
+	namespace
+	
+variable:
+	name
+	value_of_type{boolean/integer/real/string/array/iterable/object_of_class/resource/null/callback/}
+
