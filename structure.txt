@@ -11,7 +11,8 @@ file.php: phpzsoneS
 
 phpzone:
 	declarations
-	thread
+	actions
+	comments
 
 phpoperator: {action/declaration/comment}
 
@@ -39,4 +40,6 @@ declaration:
 variable:
 	name
 	value_of_type{boolean/integer/real/string/array/iterable/object_of_class/resource/null/callback/}
+
+
 
