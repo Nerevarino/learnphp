@@ -1,45 +1,87 @@
-программисты пишут программы на  php
-=> программисты контролируют .php файлы
+php-program:
+	modules
 
-.php файл содержит список php-зон
+module:
+	entities
 
-php region: открывающий тег php , тело php и закрывающий тег php
-<?php - открывающий тег php, ?> - закрывающий тег,
-если с момента открывающего тега до конца файла - зона php, то закрывающий тег можно опустить
-
-file.php: phpzsoneS
-
-phpzone:
-	declarations
-	actions
-	comments
-
-phpoperator: {action/declaration/comment}
-
-action:
+entity:
 	expression
-	control_structure
+	declaration
+	comment
+	utility
+
+
 
 expression:
-	operation
+	operator
 	operands
 
-operation:{unary/binary/ternary/funcall}
+operators:
+	arithmetic
+	assign
+	bit
+	compare
+	error
+	execution
+	incdec
+	logic
+	string
+	array
+	checktype
 
-operand:  {value/variable/expression}
+arithmetic:
+	u+  #конвертация в int или float
+	u-  #смена знака на минус
+	+
+	-
+	*
+	/
+	%  деление по модулю
+	** возведение в степень
 
+assign:
+	=
+	binop=
 
+bit:
+	&  #and
+	|  #or
+	^  #xor
+	~  #инверсия
+	<< #сдвиг влево  (умножение на 2)
+	>> #сдвиг вправо (деление на 2)
 
+compare:
+	==   #равно? (после преобразования типов)
+	===  #тождественно равно? (без преобразования типов - изначально одинаковый тип)
+	!=   #не равно? (после преобразования типов)
+	<>   #не равно? (после преобразования типов)
+	!==  #тождественно не равно? (без преобразованият типов - не равно либо по значению,
+	     		      	      либо по типу)
+	<    #строго меньше?
+	>    #строго больше?
+	<=   #меньше или равно?
+	>=   #больше или равно?
+	<=>  #космический корабль? (spaceship) результат целое число меньше, больше или равно 0
+	      в зависимости от аналогичного соотношения операндов
 
-declaration:
-	variable
-	function
-	class
-	namespace
+error:
+	@  #оператор управления ошибками. Любые сообщения об ошибках в выражении-операнде игнорируются
 	
-variable:
-	name
-	value_of_type{boolean/integer/real/string/array/iterable/object_of_class/resource/null/callback/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
